@@ -1,37 +1,25 @@
 function Payment() {
-  const cardNumber = "9860 1701 0803 1213";
-
-  function copyCard() {
-    navigator.clipboard.writeText(cardNumber);
-    alert("Karta raqami nusxalandi ✅");
-  }
-
   return (
     <div className="max-w-6xl mx-auto py-20 px-6">
       <h1 className="text-5xl font-bold text-slate-800">To‘lov qilish</h1>
 
       <p className="mt-4 text-gray-600">
-        Bron tasdiqlangandan so‘ng quyidagi karta orqali to‘lov qilishingiz mumkin.
+        Bron tasdiqlangandan so‘ng quyidagi usullar orqali to‘lov qilishingiz mumkin.
       </p>
 
       <div className="grid md:grid-cols-3 gap-8 mt-10">
         <div className="bg-white rounded-3xl shadow-xl p-8 border">
-          <h2 className="text-2xl font-bold text-slate-800">Karta orqali</h2>
+          <h2 className="text-2xl font-bold text-slate-800">
+            Bank hisob raqami
+          </h2>
 
-          <p className="mt-4 text-gray-600">Karta raqami:</p>
+          <p className="mt-4 text-gray-600">
+            To‘g‘ridan-to‘g‘ri bank hisob raqamiga to‘lov qilish imkoniyati
+            tez orada qo‘shiladi.
+          </p>
 
-          <div className="mt-3 bg-slate-100 rounded-2xl p-5 text-2xl font-bold text-slate-800">
-            {cardNumber}
-          </div>
-
-          <p className="mt-4 text-gray-600">Karta egasi:</p>
-          <p className="font-semibold text-slate-800">Shirin Travel</p>
-
-          <button
-            onClick={copyCard}
-            className="mt-6 w-full bg-blue-600 text-white py-3 rounded-xl hover:bg-blue-700"
-          >
-            Karta raqamini nusxalash
+          <button className="mt-6 w-full bg-slate-700 text-white py-3 rounded-xl opacity-70">
+            Tez orada
           </button>
         </div>
 
@@ -39,19 +27,28 @@ function Payment() {
           <h2 className="text-2xl font-bold text-slate-800">Payme</h2>
 
           <p className="mt-4 text-gray-600">
-            Hozircha Payme havolasi test rejimida. Keyinchalik merchant ID orqali ulanadi.
+            Payme ilovasi orqali QR kodni skaner qilib to‘lov qilishingiz mumkin.
           </p>
 
-          <button className="mt-6 w-full bg-indigo-600 text-white py-3 rounded-xl opacity-70">
-            Tez orada
-          </button>
+          <div className="mt-5 bg-slate-100 rounded-2xl p-4 flex justify-center">
+            <img
+              src="/payme-qr.png"
+              alt="Payme QR kod"
+              className="w-52 h-52 object-contain rounded-xl"
+            />
+          </div>
+
+          <div className="mt-6 w-full bg-indigo-600 text-white py-3 rounded-xl text-center font-semibold">
+            QR orqali to‘lov
+          </div>
         </div>
 
         <div className="bg-white rounded-3xl shadow-xl p-8 border">
           <h2 className="text-2xl font-bold text-slate-800">Click</h2>
 
           <p className="mt-4 text-gray-600">
-            Click to‘lov tizimi keyingi bosqichda ulanadi.
+            Click orqali onlayn to‘lov qilish imkoniyati keyingi bosqichda
+            qo‘shiladi.
           </p>
 
           <button className="mt-6 w-full bg-green-600 text-white py-3 rounded-xl opacity-70">
